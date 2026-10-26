@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Teaching Programming Portfolio | Kreshiv Chawla</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet">
+
+<script>
+/* =====================================================================
+   EDIT EVERYTHING IN THIS BLOCK. You never need to touch the rest.
+   ---------------------------------------------------------------------
+   For each item you can fill in any of these (leave out what you don't need):
+     title:  "Name of the activity"
+     text:   "1-3 sentences about what it is / what you learned"
+     youtube:"any YouTube link"  -> watch?v=, youtu.be/, shorts/, embed/ all work
+     embed:  "an iframe link"    -> e.g. Google Slides "Publish to web > Embed" link
+     link:   "any URL"           -> shows a button (Snap/Scratch project, PDF, doc)
+     linkLabel: "Button text"    -> optional, defaults to "Open"
+   To add an item: copy one { ... }, paste it, change the text.
+   To add a section: copy a whole { section: ..., items: [ ... ] } block.
+   ===================================================================== */
+const PORTFOLIO = {
+  name: "Kreshiv Chawla",
+  tagline: "Teaching Programming Portfolio",
+  about: "I'm a Math-CS major at UC San Diego. This portfolio collects the activities, lessons, assessments, and equity resources I built while learning how to teach programming, from unplugged activities to block-based coding in Snap.",
+
+  sections: [
+    {
+      section: "Unplugged Activities",
+      intro: "Teaching computing ideas without a computer, using everyday objects and movement.",
+      items: [
+        {
+          title: "My Robotic Friends: Cup Stacking",
+          text: "Writing arrow-only instructions so a \"robot\" partner can build a cup pyramid. Introduces sequences and why instructions have to be exact.",
+          youtube: ""
+        },
+        {
+          title: "Loops Notation for Robotic Friends",
+          text: "Rewriting my cup-stacking instructions with my own loop symbol, so the same pyramid takes less writing.",
+          youtube: ""
+        },
+        {
+          title: "Variables in Envelopes",
+          text: "Using labeled envelopes to show that a variable is a name holding a value that can change.",
+          youtube: ""
+        }
+      ]
+    },
+    {
+      section: "Programming in Snap",
+      intro: "Block-based programming lessons and projects.",
+      items: [
+        {
+          title: "Sequences",
+          text: "",
+          youtube: "",
+          link: "",
+          linkLabel: "Open Snap project"
+        },
+        {
+          title: "Loops & Nested Repeats",
+          text: "",
+          youtube: ""
+        },
+        {
+          title: "Events",
+          text: "",
+          youtube: ""
+        },
+        {
+          title: "Variables",
+          text: "",
+          youtube: ""
+        }
+      ]
+    },
+    {
+      section: "Assessment",
+      intro: "Ways to check what students actually understand.",
+      items: [
+        {
+          title: "Angry Bird Quiz Question",
+          text: "A quiz question I designed on sequences of move instructions, with its solution.",
+          youtube: "",
+          link: "",
+          linkLabel: "View PDF"
+        },
+        {
+          title: "Parsons Problems",
+          text: "Giving students the right blocks so they can focus on order and logic instead of hunting for instructions.",
+          youtube: ""
+        }
+      ]
+    },
+    {
+      section: "Equity in the Computing Classroom",
+      intro: "Making sure every student gets a real chance to learn, try, and contribute.",
+      items: [
+        {
+          title: "Pair-Based Lab Equity Tracking Sheet",
+          text: "A one-page sheet for tracking how each pair is working together and how much time I spend with each team.",
+          link: "",
+          linkLabel: "View sheet"
+        },
+        {
+          title: "Fair Computer Lab Rules Poster",
+          text: "Five lab rules so one student doesn't take over the keyboard and every voice gets heard.",
+          link: "",
+          linkLabel: "View poster"
+        }
+      ]
+    }
+  ]
+};
+</script>
+
+<style>
+  :root {
+    --bg: #f7f5f0;
+    --surface: #ffffff;
+    --ink: #1d2327;
+    --muted: #5d6870;
+    --line: #e4e0d8;
+    --accent: #2f5d62;
+    --accent-ink: #ffffff;
+    --accent-soft: #e3eeee;
+    --placeholder: #eeebe4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141819;
+      --surface: #1d2324;
+      --ink: #eef1f1;
+      --muted: #a3aeb0;
+      --line: #2c3536;
+      --accent: #7fb7ba;
+      --accent-ink: #0f1516;
+      --accent-soft: #233334;
+      --placeholder: #232b2c;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+    line-height: 1.55;
+  }
+  a { color: inherit; }
+
+  header.site {
+    position: sticky; top: 0; z-index: 10;
+    background: color-mix(in srgb, var(--bg) 92%, transparent);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  .bar {
+    max-width: 1100px; margin: 0 auto; padding: 12px 16px;
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .brand { font-weight: 700; text-decoration: none; margin-right: auto; }
+  nav.links { display: flex; gap: 6px; flex-wrap: wrap; }
+  nav.links a {
+    text-decoration: none; font-size: 14px; color: var(--muted);
+    padding: 6px 10px; border-radius: 999px;
+  }
+  nav.links a:hover { background: var(--accent-soft); color: var(--ink); }
+
+  .hero { max-width: 1100px; margin: 0 auto; padding: 64px 16px 32px; }
+  .eyebrow {
+    display: inline-block; font-size: 13px; font-weight: 600; letter-spacing: .06em;
+    text-transform: uppercase; color: var(--accent); margin-bottom: 12px;
+  }
+  .hero h1 {
+    font-family: Fraunces, Georgia, serif; font-weight: 600;
+    font-size: clamp(34px, 6vw, 56px); line-height: 1.08; margin: 0 0 16px;
+  }
+  .hero p { max-width: 680px; font-size: 18px; color: var(--muted); margin: 0; }
+
+  main { max-width: 1100px; margin: 0 auto; padding: 0 16px 80px; }
+  section.block { padding-top: 48px; scroll-margin-top: 70px; }
+  section.block h2 {
+    font-family: Fraunces, Georgia, serif; font-weight: 600;
+    font-size: clamp(24px, 3.4vw, 32px); margin: 0 0 6px;
+  }
+  .section-intro { color: var(--muted); margin: 0 0 20px; max-width: 680px; }
+
+  .grid {
+    display: grid; gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+  }
+  .card {
+    background: var(--surface); border: 1px solid var(--line);
+    border-radius: 14px; overflow: hidden; display: flex; flex-direction: column;
+  }
+  .media { position: relative; aspect-ratio: 16 / 9; background: var(--placeholder); }
+  .media iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .media.empty {
+    display: flex; align-items: center; justify-content: center;
+    color: var(--muted); font-size: 14px;
+  }
+  .body { padding: 16px 18px 18px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+  .body h3 { margin: 0; font-size: 18px; }
+  .body p { margin: 0; color: var(--muted); font-size: 15px; }
+  .btn {
+    align-self: flex-start; margin-top: auto;
+    display: inline-block; text-decoration: none; font-weight: 600; font-size: 14px;
+    background: var(--accent); color: var(--accent-ink);
+    padding: 8px 14px; border-radius: 8px;
+  }
+  .btn:hover { filter: brightness(1.08); }
+
+  footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+  footer .bar { padding: 24px 16px; }
+</style>
+</head>
+<body>
+  <header class="site">
+    <div class="bar">
+      <a class="brand" href="#top" id="brand"></a>
+      <nav class="links" id="nav"></nav>
+    </div>
+  </header>
+
+  <div class="hero" id="top">
+    <span class="eyebrow" id="tagline"></span>
+    <h1 id="name"></h1>
+    <p id="about"></p>
+  </div>
+
+  <main id="content"></main>
+
+  <footer><div class="bar" id="foot"></div></footer>
+
+<script>
+  // Turns any YouTube link (or a bare 11-char id) into an embed URL.
+  function youtubeEmbed(url) {
+    if (!url) return null;
+    url = url.trim();
+    let id = null, start = 0;
+    if (/^[\w-]{11}$/.test(url)) id = url;
+    try {
+      const u = new URL(url);
+      const host = u.hostname.replace(/^www\.|^m\./, "");
+      if (host === "youtu.be") id = u.pathname.slice(1, 12);
+      else if (host.endsWith("youtube.com") || host.endsWith("youtube-nocookie.com")) {
+        if (u.searchParams.get("v")) id = u.searchParams.get("v");
+        else {
+          const m = u.pathname.match(/\/(embed|shorts|live|v)\/([\w-]{11})/);
+          if (m) id = m[2];
+        }
+      }
+      const t = u.searchParams.get("t") || u.searchParams.get("start");
+      if (t) {
+        const parts = t.match(/(?:(\d+)h)?(?:(\d+)m)?(?:(\d+)s?)?/);
+        start = (+parts[1] || 0) * 3600 + (+parts[2] || 0) * 60 + (+parts[3] || 0);
+      }
+    } catch (e) { /* not a URL, maybe a bare id */ }
+    if (!id) return null;
+    return "https://www.youtube-nocookie.com/embed/" + id + "?rel=0" + (start ? "&start=" + start : "");
+  }
+
+  function el(tag, attrs = {}, text) {
+    const n = document.createElement(tag);
+    for (const [k, v] of Object.entries(attrs)) n.setAttribute(k, v);
+    if (text) n.textContent = text;
+    return n;
+  }
+
+  function slug(s) { return s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, ""); }
+
+  const P = PORTFOLIO;
+  document.title = P.tagline + " | " + P.name;
+  document.getElementById("brand").textContent = P.name;
+  document.getElementById("tagline").textContent = P.tagline;
+  document.getElementById("name").textContent = P.name;
+  document.getElementById("about").textContent = P.about;
+  document.getElementById("foot").textContent = "© " + new Date().getFullYear() + " " + P.name;
+
+  const nav = document.getElementById("nav");
+  const content = document.getElementById("content");
+
+  P.sections.forEach(sec => {
+    const id = slug(sec.section);
+    nav.appendChild(el("a", { href: "#" + id }, sec.section));
+
+    const block = el("section", { class: "block", id });
+    block.appendChild(el("h2", {}, sec.section));
+    if (sec.intro) block.appendChild(el("p", { class: "section-intro" }, sec.intro));
+
+    const grid = el("div", { class: "grid" });
+    (sec.items || []).forEach(item => {
+      const card = el("article", { class: "card" });
+      const src = youtubeEmbed(item.youtube) || (item.embed ? item.embed.trim() : null);
+      const hasMediaField = "youtube" in item || "embed" in item;
+
+      if (src) {
+        const media = el("div", { class: "media" });
+        media.appendChild(el("iframe", {
+          src, title: item.title || "Embedded content", loading: "lazy",
+          allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",
+          allowfullscreen: "", referrerpolicy: "strict-origin-when-cross-origin"
+        }));
+        card.appendChild(media);
+      } else if (hasMediaField) {
+        card.appendChild(el("div", { class: "media empty" }, "Video coming soon"));
+      }
+
+      const body = el("div", { class: "body" });
+      if (item.title) body.appendChild(el("h3", {}, item.title));
+      if (item.text) body.appendChild(el("p", {}, item.text));
+      if (item.link) {
+        body.appendChild(el("a", { class: "btn", href: item.link, target: "_blank", rel: "noopener" },
+          item.linkLabel || "Open"));
+      }
+      card.appendChild(body);
+      grid.appendChild(card);
+    });
+    block.appendChild(grid);
+    content.appendChild(block);
+  });
+</script>
+</body>
+</html>
